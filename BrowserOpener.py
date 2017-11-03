@@ -14,7 +14,7 @@ def open_tabs(url_list):
 
 
 def main():
-    webbrowser.open("https://google.com",new=0, autoraise=False)
+    webbrowser.open("",new=0, autoraise=False)
     time.sleep(1)
     open_tabs(socialMediaUrls)
     open_tabs(techUrls)
