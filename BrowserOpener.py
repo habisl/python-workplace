@@ -15,7 +15,7 @@ def open_tabs(url_list):
 
 def main():
     webbrowser.open("",new=2, autoraise=False)
-    time.sleep(1) #To pause python program
+    time.sleep(5) #To wait the program to start after 5 seconds
     open_tabs(socialMediaUrls)
     open_tabs(techUrls)
 main()
