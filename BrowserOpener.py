@@ -1,5 +1,5 @@
-#The program can open multiple webpage at once
-#Author: Habibul
+#The program can open multiple webpages at once
+
 
 import webbrowser
 import time
@@ -14,8 +14,8 @@ def open_tabs(url_list):
 
 
 def main():
-    webbrowser.open("",new=0, autoraise=False)
-    time.sleep(1)
+    webbrowser.open("",new=2, autoraise=False)
+    time.sleep(1) #To pause python program
     open_tabs(socialMediaUrls)
     open_tabs(techUrls)
 main()
