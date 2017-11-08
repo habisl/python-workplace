@@ -1,5 +1,5 @@
-"""Usage: main.py -i <file>...
-    main.py -i <file> [--name=<name>|--number=<number>|--city=<city>|--country=<country>|--company=<company>]
+"""Usage: jsonreader.py -i <file>...
+    jsonreader.py -i <file> [Options]
 
     Load configuration from json FILE
 Arguments:
