@@ -3,7 +3,5 @@
 '''
 
 def power(n):
-  
-	return n**2
-
-print(power(2))
+  return n**2
+print(power(2)) # Just to check if the power of 2 returns 4
