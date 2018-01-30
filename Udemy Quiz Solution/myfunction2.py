@@ -9,3 +9,16 @@ if age < 150:
  print (age_foo(age))
 else:
 print("How it is possible?")
+
+
+'''
+The function that was implemented in one of the previous exercises checks integer datatypes,
+but not about floats. So, please expand the conditional block so that floats are counted too.
+'''
+def string_length(mystring):
+     if type(mystring) == int:
+         return "Sorry, integers don't have length"
+     elif type(mystring) == float:
+         return "Sorry, floats don't have length"
+     else:
+         return len(mystring)
