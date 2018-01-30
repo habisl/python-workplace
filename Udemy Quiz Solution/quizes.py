@@ -11,6 +11,18 @@ def cel_to_fahr(c):
     return f
 print(cel_to_fahr(10))
 
+'''
+Now, the lowest possible temperature that physical matter can reach is -273.15 °C. 
+With that in mind, please improve the function by making it print out a message in case a number 
+lower than -273.15 is passed as input when calling the function.
+'''
+def c_to_f(c):    
+    if c< -273.15:        
+        return "That temperature doesn't make sense!"    
+    else:        
+        f=c*9/5+32        
+        return f
+print(c_to_f(-273.4))
 # A function that takes any string as argument and returns the length of that string.
 def string_length(mystring):
     return len(mystring)
