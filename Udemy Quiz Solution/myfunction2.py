@@ -1,4 +1,4 @@
-# Function with if and else statement
+# Function with conditionals
 
 def age_foo(age):
   new_age = age + 50
