@@ -10,3 +10,10 @@ def cel_to_fahr(c):
     f = c * 9/5 + 32
     return f
 print(cel_to_fahr(10))
+
+# A function that takes any string as argument and returns the length of that string.
+def string_length(mystring):
+    return len(mystring)
+print(string_length("Hello"))
+
+
