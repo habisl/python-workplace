@@ -16,4 +16,14 @@ def string_length(mystring):
     return len(mystring)
 print(string_length("Hello"))
 
+#What would the following code output?
+
+mynumber  = 5.0
+if type(mynumber) == int:
+    print("It's an integer")
+elif type(mynumber) == float: # Since 5.0 is a float datatype, the statement under elif would be executed.
+    print("It's a float")
+else:
+    print("It's not a number")
+
 
