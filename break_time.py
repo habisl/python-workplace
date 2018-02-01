@@ -1,7 +1,7 @@
-'''The program allows computer user
+"""The program allows computer user
 to remind take a break in every 2 hours in the current time
 
-'''
+"""
 
 import time
 import webbrowser
