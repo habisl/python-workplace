@@ -1,7 +1,9 @@
+# A good use of while loop
+
 password=''
-while password != 'python123':
+while password != 'mypass123':
   password=input("Enter password: ")
-  if password == 'python123':
+  if password == 'mypass123':
     print("You are logged in!")
   else:
       print("Sorry, try again")
