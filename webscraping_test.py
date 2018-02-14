@@ -19,3 +19,11 @@ for item in all_cls:
     print(item.find_all("h2")[0].text)
 for item in all_cls:
     print(item.find_all("p")[0].text)
+
+    
+    
+    
+    
+    
+    
+    
