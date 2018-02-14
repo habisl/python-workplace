@@ -29,3 +29,15 @@ def c_to_f(c):
         return f
 for t in temperatures:
     print(c_to_f(t))
+    
+    temperatures=[10,-20,-289,100]
+ 
+#  Treating both the temperature input and the file path as function arguments:
+def writer(temperatures, filepath):
+    with open(filepath, 'w') as file:
+        for c in temperatures:
+            if c>-273.15:
+                f=c*9/5+32
+                file.write(str(f)+"\n")
+ 
+writer(temperatures, "temps.txt") 
