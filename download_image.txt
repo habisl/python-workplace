@@ -1,0 +1,44 @@
+http://techconductor.com/blogs/python/downloading_all_images_from_pixabay.php
+
+Python and BeautifulSoup are the ultimate tool to make the life of a programmer easy. When there is a task involving repetation of steps that can be broken down to few lines of instructions, then its always good to write a python script to do the task.
+
+Pixabay is an awesome site where you can download images for free without any copyright issue. There are millions of images of all categories like nature, animals, earth, and lots more. But to download high resolution images you must signin which you can do by creating your account for free. But low and medium resolution images can be downloaded directly.
+
+To get all the basic knowledge about python and BeautifulSoup take a look at the previous blogs in the python category here. First please read the following blogs to get better understanding also these are explained in depth and line by line.
+How to download all xkcd comic!
+
+Using Python and BeautifulSoup to Download all Avengers Character images.
+
+Here we are going to download the image from the website using our python script, most of the code is similar to the previous projects follow above mentioned links they are very important. Lets proceed step by step:
+
+Step 1:
+The first step is to study the website and find out the way in which everything is organized. By navigating to different pages we can see that the link changes in a particular manner and only the digit representing page number changes in the link so its clear that we can jump to any page by providing the page number at the end ot the link as ?&pagi=page_number. Now as we can navigate different pages lets move to the main part of inspecting the image and trying to understand how the HTML is organized. Just right click on any image and select inspect.
+pixabay website inspect
+
+It can be clearly seen that all the images are under the div tag which has an identifier class:item. Again under the div there are two things the a tag and the img tag so we have to extract first all the div which has the identifier item from the page and then from that extract all the a tag and from that extract the img tag and lastly from the img tag extract the value of src which is the image link. So to clear we go from div-a-img-src.
+Step 2:
+Now that we have analyzed the website and noted all the important result, we are ready to write our script. The python script is similar to what i used for earlier projects as mentioned above.
+Now lets write our script which will download all images along with the name. Here is the preview from line 1-6:
+pixabay_scrapper code part1
+
+From line 1-6 we just imported all the parameters we are going to use later in the script.
+
+Now lets look at the preview of the code from line 8-21:
+pixabay_scrapper code part2
+
+On line 8 we started our try and except clause. So whenever an error occurs we can break and jump to our except clause and print what went wrong. On line-9 we begin our main for loop which will be used to navigate to different page starting from 1 you can increase the value of last page here its just 5. Next on line 10 The variable url is made containing the link of the page to navigate, the end of the link is concatenated with the value of the page number.
+Here on line 13 we build our headers dictionary which will hold our headers. Headers are the first information about the user which the server checks before making the connection. On line 14 we defined the key User-Agent to the dictionary headers and assighed the value which is the actual header we are going to use.
+Here on line 15 the begining is made to establish the connection. The firts is the variable req which uses the urllib.request method to construct the request by using the headers and the url we provided. Next on line 16 variable resp uses the urllib.request.urlopen() method to make a connection and gather the web page. Next we just print connection ok just to know that all went well. The variable respData holds the entire web page by using the method .read() in the end we just close the connection using the method .close() as we have the entire web page on the variable respData. Next on line-21 we build our object soup which uses BeautifulSoup to process our respData with the help of html.parser
+
+Step 3:
+pixabay_scrapper code part3
+Here on line-23 we made our second for loop which is nested to the first loop. This loop is uded to fetch all the images in the rules we analyzed from the first step. Lets see how its done, first the array img_src holds all the div which has the identifier class: item. Next img holds the contents of the img tag fetched using the index i from the array image_src. We see that the img again is an array which contains single element so we extract the src from it using get('src') and store it in image_link.
+On line-29 we used the function rstrip() to cut out the image name from the link by cuting all the elements before / in the link.
+Step: 4
+
+Now as we have both the image link as well as the name along with its format we are ready to download the image. We use the urlretrive function to download the image by providing it the image_link which is the full image link and name which is the name of the image along with its format in which we want to store it. Finally we just print out the ongoing result. Here the codes are againg put inside a try and except clause as there are times when pixabay does not provide us the full image link and it simply gives src as /static/img/blank.gif which I found late because pixabay renders first 15 or 20 images and until you dont scroll down it does not provide the src for those images which are located down the page. Well our script can not scroll as a user does so it is only able to gather first 15 or 20 images from each page thats why the second for loop has range from 0 to 15.
+In the end there is the final exception clause which will print the reason when an error occures in our try clause. Finally we run the script and all seems to work properly. ;-) As usual all the codes are on github you can easily clone modify or raise an issue if you have any problem.
+
+pixabay_scrapper code result1 
+Here is another snapshot of the folder containing all the images.
+
