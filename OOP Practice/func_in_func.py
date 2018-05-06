@@ -12,3 +12,11 @@ def f():
 
     
 f()
+
+"""
+Output:
+This is the function 'f'
+I am calling 'g' now:
+Hi, it's me 'g'
+Thanks for calling me
+"""
