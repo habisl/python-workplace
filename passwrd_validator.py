@@ -10,15 +10,12 @@ spc_char=['#', '%', '@', '!']
 
 def sucess():
   print("Sucess!" + username + "  your password has been created")
-
+# not ready yet
 def validator():
   if(l>6 and l<12):
-# Bugs need to fixed here
+    
     for i in password:
-      if i in low_case:
-        if i in upp_case:
-          if i in num:
-            if i in spc_char:
+      if i in low_case and num and spc_char and upp_case:
              sucess()
              break
   
