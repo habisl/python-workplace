@@ -1,4 +1,4 @@
-# The get() method on dicts
+# Pythonic tricks for get() method on dicts
 # and its "default" argument
 
 name_for_userid = {
@@ -12,4 +12,8 @@ def greeting(userid):
 
 # Calling the function with the ids
 print(greeting(382))
-print(greeting(4545454)) # Any random numbers will be accepted in this case
+# "Hi Alice!"
+
+print(greeting(4545454)) # If it does not exist then the value of the default argument is returned instead.
+# "Hi there!"
+
