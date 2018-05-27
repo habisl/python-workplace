@@ -1,5 +1,5 @@
 # Perfect example of GUI based application in python
-# Credit to: http://www.instructables.com/id/How-to-Make-Your-First-Simple-Software-Using-Pytho/
+# Credit goes to: http://www.instructables.com/id/How-to-Make-Your-First-Simple-Software-Using-Pytho/
 
 from Tkinter import *
 import Tkinter
