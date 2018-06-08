@@ -24,15 +24,13 @@ def dispatch_dict(operator, x, y):
     }.get(operator, lambda: None)()
 
 """
+Sample output: 
 >>> dispatch_if('mul', 2, 8)
 16
-
 >>> dispatch_dict('mul', 2, 8)
 16
-
 >>> dispatch_if('unknown', 2, 8)
 None
-
 >>> dispatch_dict('unknown', 2, 8)
 None
 """
