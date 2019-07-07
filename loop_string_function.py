@@ -9,3 +9,6 @@ def string_splosion(str):
   for i in range(n):
   out_str = out_str + str[:i=1]
 return out_str
+
+
+
