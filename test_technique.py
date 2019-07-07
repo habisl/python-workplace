@@ -1,5 +1,4 @@
-# Different ways to test multiple
-# flags at once in Python
+# Different ways to test multiple flags at once in Python
 
 x, y, z = 0, 1, 0
 
