@@ -1,4 +1,4 @@
-# Couple opf technics to format the string with escape character. 
+# Couple of technics to format the string with escape character. 
 
 
 splitString = "This string has been \nsplit over\nseveral\nlines"
