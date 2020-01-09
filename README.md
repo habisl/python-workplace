@@ -5,3 +5,5 @@ Common place for my python codes. Most of the codes are for my own practice
 
 https://morioh.com/p/f0cf7e7a2297?fbclid=IwAR2fKm2CGNuQ_kQWoBco1IMdXWinuemXtMH7uluBYoxaJ3STkZSD2L7urQA
 
+## Directory and Files Management in Python
+https://morioh.com/p/80607917b334?f=5c21f93bc16e2556b555ab2f&fbclid=IwAR2l5xpEgrzkQiU0U7JcqBrGGMt9rL5Bx301MFBMvJkadGir7OdqtiusezQ
