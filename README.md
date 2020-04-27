@@ -10,3 +10,7 @@ https://morioh.com/p/80607917b334?f=5c21f93bc16e2556b555ab2f&fbclid=IwAR2l5xpEgr
 
 ## Python "while" Loops (Indefinite Iteration)
 https://realpython.com/python-range/?fbclid=IwAR2CefgCjzqYONfZYj6A12PNk8yx89kdUL_bvXoNEl0LD-Xo96lwRnQUdy8
+
+## Introduction Four Advanced Function Concepts in Python
+
+https://morioh.com/p/83e64a105464?f=5c21f93bc16e2556b555ab2f&fbclid=IwAR1lIIjuFdEHPAipe91C7rXEorYIPR1Fr9qGfxf4xl_UNvF6UCG_zhcGkYs
