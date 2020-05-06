@@ -1,5 +1,5 @@
-# My-Python-Workplace
-Common place for my python codes. Most of the codes are for my own practice
+# Python-Workplace
+Common place for my python related activities. Most of the codes are for my own practice
 
 ## Top 100 Python Interview Questions Must Prepare in 2020
 
