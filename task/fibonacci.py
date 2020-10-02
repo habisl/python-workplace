@@ -1,21 +1,32 @@
-
 # -----------------------------------------------------------
-# Python script which prints Febonacchi series based on given 
-# range of a positive integer
+# Python script to print first n Fibonacci numbers 
+# and save the output to a file in the same folder
 # 
+# By Habibul Islam 
 # -----------------------------------------------------------
 
-# First check if the input value is positive integer or not
-num = None 
-while type(num) is not int: 
-   try: 
-      num = input("Please enter an integer: ") 
-      num = int(num) 
-      print("You entered: %d" % num) 
-   except ValueError: 
-      print("%s is not an integer.\n" % num)
-       
+ 
+valid_input = False
+
+# check if the number of terms is valid
+while not valid_input:
+    try:
+        num = int(input('How many Fibonacci numbers should be printed out in the sequence: '))
+        if num > 0:
+            valid_input = True
+        else:
+            print("That's not a positive number. Try again: ")
+    except ValueError:
+        print("That's not an integer. Try again: ")
+      
+# Initializing the starting numbers
 a,b = 0,1
-for i in range(0,num):
-  print(a)
-  a,b = b, a+b
+
+# Open the file to add the output
+with open("feb.txt", "a") as output_file:
+  output_file.write('Febonacci series for input: ' + str(num) + '\n')
+  for i in range(0,num):
+    print(a)
+    output_file.write(str(a) + '\n')
+    # apply the logic and calculate the value
+    a,b = b, a+b
