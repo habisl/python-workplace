@@ -1,0 +1,13 @@
+Febonacci series for input: 5
+0
+1
+1
+2
+3
+Febonacci series for input: 6
+0
+1
+1
+2
+3
+5
