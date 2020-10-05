@@ -23,7 +23,7 @@ while not valid_input:
 a,b = 0,1
 
 # Open the file to add the output
-with open("feb.txt", "a") as output_file:
+with open("fib.txt", "a") as output_file:
   output_file.write('Febonacci series for input: ' + str(num) + '\n')
   for i in range(0,num):
     print(a)
