@@ -1,8 +1,6 @@
 # -----------------------------------------------------------
 # Python script to print first n Fibonacci numbers 
 # and save the output to a file in the same folder
-# 
-# By Habibul Islam 
 # -----------------------------------------------------------
 
  
