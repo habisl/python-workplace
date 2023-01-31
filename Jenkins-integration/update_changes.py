@@ -2,6 +2,7 @@
 """Python script to sort out files for uploading in the artifactory.
 The script returns the list of files in JSON format to parse
 in the Jenkinsfile.
+
 Example usage:
 To get the files changed in the last commit:
     $ python3 scripts/update_changes.py latest_changes
@@ -14,7 +15,11 @@ import glob
 import json
 import os
 import urllib.request
+
+
 EXTENSIONS = ['.spc', '.cfg', '.json']
+
+
 def get_active_channels():
     """Sort out the channels which currently have active status"""
     active_channels = []
@@ -28,6 +33,8 @@ def get_active_channels():
                 and config['channel']['www-enabled'] == 'true'
             )
     return active_channels
+
+
 def channel_list():
     """Create the channel list based on channel's active status"""
     channels = []
@@ -37,6 +44,8 @@ def channel_list():
         channel_name = split_lines[1] # Channel name is in the second position /channels/arm-11/..
         channels.append(channel_name)
     return channels
+
+
 def find_commit_changes():
     """Get the files that got changed in the last commit"""
     build_url = os.environ['BUILD_URL']
@@ -52,6 +61,8 @@ def find_commit_changes():
         return changed_files
     except IndexError:
         return None
+
+    
 def json_fileinfo(paths):
     """Return the file info in json format"""
     ch = channel_list()
@@ -70,6 +81,8 @@ def json_fileinfo(paths):
             }
         files.append(file_info)
     return json.dumps(files, indent=4)
+
+
 def get_commit_changes():
     """Returns the json format of the modified files"""
     changed = find_commit_changes()
@@ -80,6 +93,8 @@ def get_commit_changes():
     if not paths:
         return m
     return json_fileinfo(paths)
+
+
 def find_all_channel_files():
     """List all files for the active channels in the channel directory"""
     ch = channel_list()
@@ -93,12 +108,18 @@ def find_all_channel_files():
                 if channel_name not in ch:
                     all_channel_files.remove(element)
     return json_fileinfo(all_channel_files)
+
+
 def _print_commit_changes():
     output= get_commit_changes()
     print(output)
+    
+    
 def _print_all_channel_files():
     output= find_all_channel_files()
     print(output)
+    
+    
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("function",
@@ -110,5 +131,7 @@ def main():
         _print_commit_changes()
     elif args.function == "all_channels":
         _print_all_channel_files()
+        
+        
 if __name__ == "__main__":
         main()
